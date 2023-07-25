@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Categoria</title>
+	<script src="../js/axios.min.js"></script>
+    <script src="../js/categorias.js"></script>
+	<style>
+		.pagina{
+			color: blue;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>CATEGORIAS</h1>
+	<div>
+		<label for="">Nombre Categoria</label>
+		<input type="text" name="txtNombre" id="txtNombre">
+	</div>
+	<div>
+		<label for="">Codigo Categoria</label>
+		<input type="number" name="txtCodigo" id="txtCodigo">
+	</div>
+	<div>
+		<button onclick="create()">Crear</button>
+		<button onclick="update()">Modificar</button>
+		<button onclick="deletes()">Eliminar</button>
+	</div>
+
+	<table>
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Nombre</th>
+				<th>Codigo</th>
+				<th>Opciones</th>
+				<th>Estado</th>
+			</tr>
+		</thead>
+		<tbody id="tableBody"></tbody>
+	<tfoot>
+		<tr id="list"></tr>
+	</tfoot>
+	</table>
+	<div id="errores">
+		
+	</div>
+</body>
+</html>
